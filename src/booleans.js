@@ -1,62 +1,152 @@
 function negate(a) {
-  // your code here
-};
+  if (a) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function both(a, b) {
-  // your code here
-};
+  if (a === true && b === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function either(a, b) {
-  // your code here
-};
+  if (a === true || b === true) {
+    return true;
+  } else if (a === true || b === false) {
+    return false;
+  } else {
+    return false;
+  }
+}
 
 function none(a, b) {
-  // your code here
-};
+  if (a === true || b === true) {
+    return false;
+  } else if (a === true || b === false) {
+    return true;
+  } else {
+    return true;
+  }
+}
 
 function one(a, b) {
-  // your code here
-};
+  if (a === true && b === true) {
+    return false;
+  } else if (a === true || b === true) {
+    return true;
+  } else if (a === false && b === false) {
+    return false;
+  } else if (a === false || b === true) {
+    return true;
+  }
+}
 
+let blank = '';
 function truthiness(a) {
-  // your code here
-};
+  if (
+    typeof a !== Number ||
+    typeof a === 0 ||
+    typeof a === '' ||
+    typeof a === null ||
+    typeof a === undefined ||
+    typeof a === NaN
+  ) {
+    return false;
+  }
+}
 
 function isEqual(a, b) {
-  // your code here
-};
+  if (a !== b) {
+    return false;
+  } else if (a === b) {
+    return true;
+  } else if (a === true && b === true) {
+    return true;
+  } else if (a === true && b === false) {
+    return false;
+  } else if (typeof a === 10 && b === null) {
+    return false;
+  } else if (typeof a === 10 && b === 10) {
+    return true;
+  }
+}
 
 function isGreaterThan(a, b) {
-  // your code here
-};
+  if (a < b) {
+    return false;
+  } else if (a > b) {
+    return true;
+  } else if ((a = b)) {
+    return false;
+  }
+}
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+  if (a <= b) {
+    return true;
+  } else if (b <= a) {
+    return false;
+  } else if ((a = b)) {
+    return true;
+  }
+}
 
 function isOdd(a) {
-  // your code here
-};
+  if (a % 2 !== 0) {
+    return true;
+  } else if (a % 2 === 0) {
+    return false;
+  }
+}
 
 function isEven(a) {
-  // your code here
-};
+  if (a % 2 === 0) {
+    return true;
+  } else if (a % 2 !== 0) {
+    return false;
+  }
+}
 
 function isSquare(a) {
-  // your code here
-};
+  let sqrt = Math.floor(Math.sqrt(a));
+  if (a === sqrt * sqrt) {
+    return true;
+  } else if (a !== sqrt * sqrt) {
+    return false;
+  }
+}
 
 function startsWith(char, string) {
-  // your code here
-};
+  if (char === string.charAt(0)) {
+    return true;
+  } else if (char !== string.charAt(0)) {
+    return false;
+  }
+}
 
 function containsVowels(string) {
-  // your code here
-};
+  if (string.includes('A', 'E', 'I', 'O', 'U')) {
+    return true;
+  }
+  if (string.includes('a', 'e', 'i', 'o', 'u')) {
+    return true;
+  }
+  return false;
+}
 
 function isLowerCase(string) {
-  // your code here
-};
+  if (string === string.toLowerCase()) {
+    return true;
+  }
+  if (string !== string.toLowerCase()) {
+    return false;
+  }
+}
 
 module.exports = {
   negate,

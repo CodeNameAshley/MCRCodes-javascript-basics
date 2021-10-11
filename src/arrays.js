@@ -1,13 +1,22 @@
 const getNthElement = (index, array) => {
-  // your code here
-};
+  for (let index = 0 ; index < array.length; index ++);
+  if (index === index) {  
+  return (array[index]);} 
+ else if (index % array.length ){
+    return (array[index])
+  }
+}
 
 const arrayToCSVString = array => {
-  // your code here
-};
+  for (let i = 0;  i < array.length; i++)
+ array_str = array.toString();
+return array_str;
+}
 
 const csvStringToArray = string => {
-  // your code here
+  for (let i = 0; i < string.length; i++)
+  array_str2 = string.split(',');
+return array_str2;
 };
 
 const addToArray = (element, array) => {

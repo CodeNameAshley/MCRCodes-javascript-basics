@@ -1,26 +1,29 @@
-function sayHello (string) {
-  // your code here
-};
+function sayHello(string) {
+  return 'Hello, ' + string + '!';
+}
 
-function uppercase (string) {
-  // your code here
-};
+function uppercase(string) {
+  return string.toUpperCase('abc');
+}
 
-function lowercase (string) {
-  // your code here
-};
+function lowercase(string) {
+  return string.toLowerCase('ABC');
+}
 
-function countCharacters (string) {
-  // your code here
-};
+function countCharacters(string) {
+  const askew = string.length;
+  return askew;
+}
 
-function firstCharacter (string) {
-  // your code here
-};
+function firstCharacter(string) {
+  const firstc = string.charAt();
+  return firstc;
+}
 
-function firstCharacters (string, n) {
-  // your code here
-};
+function firstCharacters(string, n) {
+  const firstc = string.substring(0, n);
+  return firstc;
+}
 
 module.exports = {
   sayHello,
