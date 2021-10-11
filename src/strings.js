@@ -11,8 +11,7 @@ function lowercase(string) {
 }
 
 function countCharacters(string) {
-  const askew = string.length;
-  return askew;
+  return string.length;
 }
 
 function firstCharacter(string) {

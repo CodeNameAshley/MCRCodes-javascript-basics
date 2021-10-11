@@ -1,9 +1,9 @@
 const getNthElement = (index, array) => {
   for (let index = 0 ; index < array.length; index ++);
   if (index === index) {  
-  return (array[index]);} 
- else if (index % array.length ){
-    return (array[index])
+  return (array[index]);}
+ else if (index %  2 === 0 ){
+    return (array[index(0)])
   }
 }
 
@@ -20,19 +20,20 @@ return array_str2;
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  if (index > -1)
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(String)
 };
 
 const uppercaseWordsInArray = strings => {
