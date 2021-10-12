@@ -46,12 +46,11 @@ function one(a, b) {
   }
 }
 
-let blank = '';
 function truthiness(a) {
   if (
-    typeof a !== Number ||
+    typeof a === false ||
+    typeof a === '' |
     typeof a === 0 ||
-    typeof a === '' ||
     typeof a === null ||
     typeof a === undefined ||
     typeof a === NaN
@@ -130,14 +129,15 @@ function startsWith(char, string) {
 }
 
 function containsVowels(string) {
-  if (string.includes('A', 'E', 'I', 'O', 'U')) {
-    return true;
-  }
-  if (string.includes('a', 'e', 'i', 'o', 'u')) {
-    return true;
-  }
-  return false;
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+  for (i=0; i<vowels.length; i++)
+ if (vowels.includes(string[i])) {
+  return true;
+} else if  (!vowels.includes(string[i])){
+    return false; 
 }
+}
+
 
 function isLowerCase(string) {
   if (string === string.toLowerCase()) {

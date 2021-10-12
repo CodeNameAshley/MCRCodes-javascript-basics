@@ -37,27 +37,29 @@ const numbersToStrings = numbers => {
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => string.toUpperCase())
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => string.split("").reverse().join("").split(" ").reverse().join(" "))
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(number => number % 2 === 0)
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
-};
+  for (let index = 0 ; index < array.length; index --);
+  return  array.splice(1, 1)
+}
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  for (let i =0; i < string.length; i++)
+  return strings.map(string => /^[aeiou]/i.test(str))
 };
 
 const removeSpaces = string => {
-  // your code here
+  // your cosde here
 };
 
 const sumNumbers = numbers => {
