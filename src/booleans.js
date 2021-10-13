@@ -47,16 +47,21 @@ function one(a, b) {
 }
 
 function truthiness(a) {
-  if (
-    typeof a === false ||
-    typeof a === '' |
-    typeof a === 0 ||
-    typeof a === null ||
-    typeof a === undefined ||
-    typeof a === NaN
-  ) {
-    return false;
-  }
+return !!a;
+
+  // if (a === "" ||  a === 0 || a === null || a === undefined || Number.isNaN(a)
+  //  ){
+  //   return false;
+  // } else {
+  //   return true;
+  // }
+
+//   if (a) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 }
 
 function isEqual(a, b) {
@@ -129,14 +134,15 @@ function startsWith(char, string) {
 }
 
 function containsVowels(string) {
-  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-  for (i=0; i<vowels.length; i++)
- if (vowels.includes(string[i])) {
-  return true;
-} else if  (!vowels.includes(string[i])){
-    return false; 
-}
-}
+  let vowels = ["a", "e", "i", "o", "u", 'A','E', 'I','O','U', ];
+    for (let i of vowels) {
+      if (string.includes(i)) {return true;}
+      } if (string !== vowels) {
+        return false; 
+      }
+    }
+//  return (string.includes('a'||'e'|| 'i'|| 'o'|| 'u'|| 'A'||'E'|| 'I'|| 'O'|| 'U', 0))
+// return string === 'a' || string  === 'e' || string === 'i' || string  === 'o' || string === 'u';
 
 
 function isLowerCase(string) {

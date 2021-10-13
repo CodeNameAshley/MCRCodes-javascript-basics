@@ -5,13 +5,13 @@ const getNthElement = (index, array) => {
  else if (index %  2 === 0 ){
     return (array[index(0)])
   }
-}
+};
 
 const arrayToCSVString = array => {
   for (let i = 0;  i < array.length; i++)
  array_str = array.toString();
-return array_str;
-}
+return array_str
+};
 
 const csvStringToArray = string => {
   for (let i = 0; i < string.length; i++)
@@ -49,14 +49,18 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  for (let index = 0 ; index < array.length; index --);
+  for (let index = 0 ; index < array.length; index --)
   return  array.splice(1, 1)
-}
+};
 
 const elementsStartingWithAVowel = strings => {
-  for (let i =0; i < string.length; i++)
-  return strings.map(string => /^[aeiou]/i.test(str))
-};
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+  let result = []
+  for (let i =0; i < strings.length; i++) {
+    if (strings.startsWith(vowels[strings]))
+return result;
+}
+}
 
 const removeSpaces = string => {
   // your cosde here

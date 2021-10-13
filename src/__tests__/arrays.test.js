@@ -1,4 +1,4 @@
-const {
+ const {
   getNthElement,
   arrayToCSVString,
   csvStringToArray,
@@ -46,7 +46,7 @@ describe('csvStringToArray', () => {
 });
 
 describe('addToArray', () => {
-  it('adds the item to the end of the array', () => {
+  xit('adds the item to the end of the array', () => {
     const array = [];
     const array2 = [1, 2, 3];
 
