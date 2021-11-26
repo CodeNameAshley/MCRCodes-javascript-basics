@@ -9,45 +9,47 @@ function negate(a) {
 function both(a, b) {
   if (a === true && b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function either(a, b) {
   if (a === true || b === true) {
     return true;
-  } else if (a === true || b === false) {
-    return false;
-  } else {
+  }
+  if (a === true || b === false) {
     return false;
   }
+  return false;
 }
 
 function none(a, b) {
   if (a === true || b === true) {
     return false;
-  } else if (a === true || b === false) {
-    return true;
-  } else {
+  }
+  if (a === true || b === false) {
     return true;
   }
+  return true;
 }
 
 function one(a, b) {
   if (a === true && b === true) {
     return false;
-  } else if (a === true || b === true) {
+  }
+  if (a === true || b === true) {
     return true;
-  } else if (a === false && b === false) {
+  }
+  if (a === false && b === false) {
     return false;
-  } else if (a === false || b === true) {
+  }
+  if (a === false || b === true) {
     return true;
   }
 }
 
 function truthiness(a) {
-return !!a;
+  return !!a;
 
   // if (a === "" ||  a === 0 || a === null || a === undefined || Number.isNaN(a)
   //  ){
@@ -56,26 +58,31 @@ return !!a;
   //   return true;
   // }
 
-//   if (a) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+  //   if (a) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 }
 
 function isEqual(a, b) {
   if (a !== b) {
     return false;
-  } else if (a === b) {
+  }
+  if (a === b) {
     return true;
-  } else if (a === true && b === true) {
+  }
+  if (a === true && b === true) {
     return true;
-  } else if (a === true && b === false) {
+  }
+  if (a === true && b === false) {
     return false;
-  } else if (typeof a === 10 && b === null) {
+  }
+  if (typeof a === 10 && b === null) {
     return false;
-  } else if (typeof a === 10 && b === 10) {
+  }
+  if (typeof a === 10 && b === 10) {
     return true;
   }
 }
@@ -83,9 +90,11 @@ function isEqual(a, b) {
 function isGreaterThan(a, b) {
   if (a < b) {
     return false;
-  } else if (a > b) {
+  }
+  if (a > b) {
     return true;
-  } else if ((a = b)) {
+  }
+  if ((a = b)) {
     return false;
   }
 }
@@ -93,9 +102,11 @@ function isGreaterThan(a, b) {
 function isLessThanOrEqualTo(a, b) {
   if (a <= b) {
     return true;
-  } else if (b <= a) {
+  }
+  if (b <= a) {
     return false;
-  } else if ((a = b)) {
+  }
+  if ((a = b)) {
     return true;
   }
 }
@@ -103,7 +114,8 @@ function isLessThanOrEqualTo(a, b) {
 function isOdd(a) {
   if (a % 2 !== 0) {
     return true;
-  } else if (a % 2 === 0) {
+  }
+  if (a % 2 === 0) {
     return false;
   }
 }
@@ -111,16 +123,18 @@ function isOdd(a) {
 function isEven(a) {
   if (a % 2 === 0) {
     return true;
-  } else if (a % 2 !== 0) {
+  }
+  if (a % 2 !== 0) {
     return false;
   }
 }
 
 function isSquare(a) {
-  let sqrt = Math.floor(Math.sqrt(a));
+  const sqrt = Math.floor(Math.sqrt(a));
   if (a === sqrt * sqrt) {
     return true;
-  } else if (a !== sqrt * sqrt) {
+  }
+  if (a !== sqrt * sqrt) {
     return false;
   }
 }
@@ -128,22 +142,25 @@ function isSquare(a) {
 function startsWith(char, string) {
   if (char === string.charAt(0)) {
     return true;
-  } else if (char !== string.charAt(0)) {
+  }
+  if (char !== string.charAt(0)) {
     return false;
   }
 }
 
 function containsVowels(string) {
-  let vowels = ["a", "e", "i", "o", "u", 'A','E', 'I','O','U', ];
-    for (let i of vowels) {
-      if (string.includes(i)) {return true;}
-      } if (string !== vowels) {
-        return false; 
-      }
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  for (const i of vowels) {
+    if (string.includes(i)) {
+      return true;
     }
+  }
+  if (string !== vowels) {
+    return false;
+  }
+}
 //  return (string.includes('a'||'e'|| 'i'|| 'o'|| 'u'|| 'A'||'E'|| 'I'|| 'O'|| 'U', 0))
 // return string === 'a' || string  === 'e' || string === 'i' || string  === 'o' || string === 'u';
-
 
 function isLowerCase(string) {
   if (string === string.toLowerCase()) {

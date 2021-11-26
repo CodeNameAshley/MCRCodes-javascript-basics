@@ -1,4 +1,4 @@
- const {
+const {
   getNthElement,
   arrayToCSVString,
   csvStringToArray,
@@ -25,7 +25,7 @@ describe('getNthElement', () => {
     expect(getNthElement(3, array)).toEqual('fox');
   });
 
-  xit('if n is greater than the number of elements, it cycles back to the start', () => {
+  it('if n is greater than the number of elements, it cycles back to the start', () => {
     expect(getNthElement(4, array)).toEqual('cat');
     expect(getNthElement(5, array)).toEqual('dog');
   });
@@ -46,7 +46,7 @@ describe('csvStringToArray', () => {
 });
 
 describe('addToArray', () => {
-  xit('adds the item to the end of the array', () => {
+  it('adds the item to the end of the array', () => {
     const array = [];
     const array2 = [1, 2, 3];
 
@@ -153,7 +153,7 @@ describe('elementsStartingWithAVowel', () => {
     ).toEqual(['apple', 'epple', 'ipple', 'opple', 'upple']);
   });
 
-  xit('is case insensitive', () => {
+  it('is case insensitive', () => {
     expect(
       elementsStartingWithAVowel([
         'Apple',
@@ -188,7 +188,7 @@ describe('elementsStartingWithAVowel', () => {
 });
 
 describe('removeSpaces', () => {
-  xit('returns the string with the space characters removed', () => {
+  it('returns the string with the space characters removed', () => {
     expect(removeSpaces('this string has spaces')).toEqual(
       'thisstringhasspaces'
     );
@@ -199,13 +199,13 @@ describe('removeSpaces', () => {
 });
 
 describe('sumNumbers', () => {
-  xit('returns the sum of the numbers in the array', () => {
+  it('returns the sum of the numbers in the array', () => {
     expect(sumNumbers([1, 3, 5, 6, 2, 8])).toEqual(25);
   });
 });
 
 describe('sortByLastLetter', () => {
-  xit('sorts the string by the last character', () => {
+  it('sorts the string by the last character', () => {
     expect(
       sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen'])
     ).toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
